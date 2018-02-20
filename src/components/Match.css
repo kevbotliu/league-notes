@@ -1,0 +1,183 @@
+.match-container {
+	display: flex;
+	flex-direction: row;
+	z-index: 0;
+	align-items: center;	
+	margin-top: 12px;
+	width: 600px;
+}
+
+.match-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	color: var(--dark);
+	margin: 0;
+	height: 100px;
+	transition: all 0.05s linear;
+	align-items: center;
+	border-radius: 1px;
+	z-index: 1;
+}
+.match-wrapper:hover {
+	box-shadow: 0 1px 6px rgba(0,0,0,0.25), 0 1px 6px rgba(0,0,0,0.27);
+	transform: scale(1.01);
+}
+
+
+
+/* KDA---------------------------------------------------------------------------------- */
+
+.kda {
+	width: 36px;
+	height: 100%;
+	margin: 3px 0 3px 0;
+	list-style: none;
+	box-shadow: 3px 0 3px -2px rgba(0,0,0,.02), 3px 0 3px -2px rgba(0,0,0,.10);
+	background: rgba(253, 253, 253, 1.0);
+}
+
+.kda > ul {
+	font-weight: 600;
+	font-size: 1.2em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.kda > ul > li {
+	border-bottom: 1px solid rgba(220, 220, 220, 1.0);
+}
+
+.win {
+	border-left: 6px solid rgba(139, 172, 209, 1);
+}
+.lose {
+	border-left: 6px solid rgba(210, 100, 100, 1);
+}
+
+.kills {
+	color: rgba(139, 172, 199, 1);
+	/* color: var(--dark); */
+}
+.deaths {
+	color: rgba(210, 100, 100, 1);
+	/* color: var(--dark); */
+}
+.assists {
+	/* color: var(--light-dark); */
+	color: var(--dark);
+}
+
+
+/* Match Info -----------------------------------------------------------------*/
+
+.matchinfo-container {
+	display: grid;
+	grid-template-columns: 75px 240px 80px 1fr;
+	grid-template-rows: 25px 1.4fr 1fr 1.4fr;
+	grid-template-areas: 
+	'header header header header'
+	'champ-icon champ-level kda stats'
+	'champ-icon items creeps stats'
+	'champ-icon items kp stats'; 
+	height: 100%;
+	width: 100%;
+	font-size: 0.9em;
+}
+
+.header {
+	grid-area: header;
+	background: rgba(245, 245, 245, 1.0);
+	border-radius: 1px;
+	display: flex;
+	margin: 5px 10px 0 10px;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	font-weight: 600;
+	font-size: 0.95em;
+}
+
+.header > span {
+	margin-right: 4px;
+}
+
+.champ-icon {
+	grid-area: champ-icon;
+	width: 55px;
+	border-radius: 2px;
+	margin: 10px;
+	filter: brightness(150%);
+}
+
+.champ-level {
+	grid-area: champ-level;
+	align-self: end;
+	color: var(--dark);
+}
+
+.champ-role {
+	font-size: 0.9em;
+	color: var(--light-dark);
+}
+
+.item-container {
+	grid-area: items;
+	display: flex;
+	flex-direction: row;
+	margin-top: 2px;
+	justify-content: space-between;
+	align-items: start;
+}
+
+.item-container > img {
+	height: 32px;
+	width: 32px;
+	border-radius: 5px;
+	background: rgba(245, 245, 245, 1.0);
+}
+
+.blank {
+	border: 2px dashed rgba(230, 230, 230, 1.0);
+}
+
+.kda-percent {
+	grid-area: kda;
+	margin-left: 20px;
+	align-self: end;
+}
+.kda-percent > span {
+	font-size: 0.9em;
+	color: var(--light-dark);
+}
+
+.creep-score {
+	grid-area: creeps;
+	margin-left: 20px;
+	align-self: center;
+}
+.creep-score > span {
+	font-size: 0.9em;
+	color: var(--light-dark);
+	margin-right: 8px;
+}
+
+.kill-part {
+	grid-area: kp;
+	margin-left: 20px;
+	align-self: start;
+}
+.kill-part > span {
+	font-size: 0.9em;
+	color: var(--light-dark);
+	margin-right: 8px;
+}
+

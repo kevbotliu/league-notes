@@ -1,0 +1,167 @@
+:global(.card) {
+	border-radius: 1px;
+    background: rgba(250, 250, 250, 1.0);
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+:global(.dark-card) {
+    border-radius: 1px;
+    background: rgba(240, 240, 240, 1.0);
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+/* 
+video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -9999;
+} */
+
+.input-grid-container
+{
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 1fr 400px 1fr;
+    grid-template-rows: 1fr 180px 1.5fr;
+    grid-template-areas: '. . .'
+    '. modal .'
+    '. . .';
+    justify-content: stretch;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+.input-wrapper
+{
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 2px;
+
+    grid-area: modal;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 3.3em;
+    font-weight: 400;
+
+    width: 322px;
+    margin: 0;
+    padding: 10px 10px 10px 10px;
+
+    text-align: center;
+
+    color: var(--dark);
+}
+
+.form-container
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 36px;
+}
+
+.form-container > select {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 1em;
+    width: 36px;
+    height: 34px;
+    padding-top: 2px;
+    outline: none;
+    border: none;
+    background: transparent;
+    text-align-last: center;
+    text-align: -webkit-center;
+    -webkit-appearance: button;
+}
+
+.form-container > input[type="text"] {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	font-size: 1.1em;
+    color: var(--dark);
+    background: none;
+
+    padding: 5px 5px 5px 10px;
+    width: 180px;
+
+    -webkit-transition: .15s ease;
+            transition: .15s ease;
+
+    border: none;
+    border-right: 1px solid rgba(230, 230, 230, 1.0);
+    border-left: 1px solid rgba(230, 230, 230, 1.0);
+    outline: none;
+    caret-color: var(--dark);
+}
+
+.form-container > input[type="text"]::placeholder
+{
+	font-weight: 400;
+	color: var(--light-dark);
+}
+
+.form-container > input[type="text"]:focus
+{
+    width: 250px;
+}
+
+.form-container > input[type="submit"] {
+    width: 36px;
+    height: 36px;
+    border: none;
+    outline: none;
+    filter: brightness(50%);
+    background: url('../data/enter-arrow.png') no-repeat center;
+}
+
+.form-container > input[type="submit"]::hover {
+	filter: brightness(10%);
+}
+
+.red {
+    color: rgba(250, 200, 200, 1.0);
+}
+
+
+
+
+.main-grid-container
+{
+    display: grid;
+    grid-template-columns: 1fr 600px 10px 600px 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+    grid-template-areas:
+    "header header header header header"
+    ". list . details ."
+    ". list . comments .";    
+    height: 100vh;
+    justify-content: stretch;
+    align-items: stretch;
+    justify-items: stretch;
+    align-content: stretch;
+
+    background: white;
+}
+
+.detail-pane {
+    grid-area: details;
+}
+
+.comment-box {
+    grid-area: comments;
+}

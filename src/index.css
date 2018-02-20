@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+
+  /*Declare CSS global variables*/
+  --dark: rgba(110, 115, 120, 1.0);
+  --light-dark: rgba(180, 185, 190, 1.0);
+  --card-white: rgba(250, 250, 250, 1.0);
+  
+}
+
+/*Remove scroll bounce*/
+html {
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background: white;
+}

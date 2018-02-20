@@ -1,0 +1,7 @@
+.container {
+	grid-area: list;
+	overflow: scroll;
+	background: none;
+	padding-bottom: 84px;
+	padding-top: 6px;
+}
